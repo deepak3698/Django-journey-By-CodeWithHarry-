@@ -125,6 +125,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+

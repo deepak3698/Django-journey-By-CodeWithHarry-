@@ -1,12 +1,20 @@
 from django.shortcuts import render,HttpResponse
-
+from .models import Post
 # Create your views here.
 
 
 
 def home(request):
+    allposts="deepak"
 
-    return render(request,'blog/bloghome.html')
+    allposts=Post.objects.all()
+
+
+    context={'allposts':allposts}
+
+    return render(request,'blog/bloghome.html',context)
+
+
 
 
 def post(request,slug):

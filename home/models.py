@@ -1,8 +1,6 @@
 from django.db import models
 
 
-
-
 # Create your models here.
 
 
@@ -14,8 +12,7 @@ class Cont(models.Model):
     desc = models.TextField()
     timeStamp=models.DateTimeField(auto_now_add=True,blank=True)
 
-
     def __str__(self):
-        return 'Message from ' +self.name
+        return 'Message from ' +self.name+ ' with email '+self.email
     
 
